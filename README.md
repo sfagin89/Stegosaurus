@@ -10,6 +10,8 @@ Pixels in an image are made up of 3 values, (red, green, blue), that range from 
 
 ![Original6x6PixImage](ExampleRGBOriginal.png) ![Shifted6x6PixImage](ExampleRGBShifted.png)
 
+<img align="center" src="./Images/ExampleRGBOriginal.png" alt="Original 6x6 Pix Image" title="Original" hspace="20"/>
+<img align="center" src="./Images/ExampleRGBShifted.png" alt="Shifted 6x6 Pix Image" title="Shifted" hspace="20"/>
 
 
 This can be used to represent the 1s and 0s of a secret message encoded in ASCII binary without showing the actual 1s and 0s.
