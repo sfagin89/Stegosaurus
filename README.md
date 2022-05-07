@@ -6,12 +6,18 @@ Steganography is the act of hiding something (like a secret message) inside of a
 
 ## How Does Digital Steganography Work?
 
-Pixels in an image are made up of 3 values, (red, green, blue), that range from 0 to 255. The difference between, say, 233 and 234 is barely noticeable, especially to the human eye. As an example, The image on the right has had the RGB values of each of its pixels subtracted by 1. Can you see the difference?
+Pixels in an image are made up of 3 values, (red, green, blue), that range from 0 to 255. The difference between, say, 233 and 234 is barely noticeable, especially to the human eye. As an example, The image on the right has had the RGB values of each of its pixels subtracted by 1. How different do they look?
 
 <p align="center">
 <img align="center" src="./Images/ExampleRGBOriginal.png" alt="Original 6x6 Pix Image" title="Original" hspace="20"/>
 <img align="center" src="./Images/ExampleRGBShifted.png" alt="Shifted 6x6 Pix Image" title="Shifted" hspace="20"/>
 </p>
+
+Now imagine these 36 pixels within an image containing over 65,000 pixels and zoomed out by 3200%
+<p align="center">
+<img align="center" src="./Images/flower_lotus.2170.jpb" alt="Original Source Image" title="Original Source Image" hspace="20"/>
+</p>
+
 
 This can be used to represent the 1s and 0s of a secret message encoded in ASCII binary without showing the actual 1s and 0s.
 
