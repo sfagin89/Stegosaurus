@@ -8,7 +8,7 @@ Steganography is the act of hiding something (like a secret message) inside of a
 
 Pixels in an image are made up of 3 values, (red, green, blue), that range from 0 to 255. The difference between, say, 233 and 234 is barely noticeable, especially to the human eye. As an example, The image on the right has had the RGB values of each of its pixels subtracted by 1. Can you see the difference?
 
-![Original6x6PixImage](Example RGB Original.png "title-1") ![Shifted6x6PixImage](Example RGB Shifted.png "title-2")
+![Original6x6PixImage](ExampleRGBOriginal.png) ![Shifted6x6PixImage](ExampleRGBShifted.png)
 
 
 
