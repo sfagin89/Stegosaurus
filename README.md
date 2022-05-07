@@ -15,7 +15,7 @@ Pixels in an image are made up of 3 values, (red, green, blue), that range from 
 
 Now imagine these 36 pixels within an image containing over 65,000 pixels and zoomed out by 3200%
 <p align="center">
-<img align="center" src="./Images/flower_lotus.2170.jpb" alt="Original Source Image" title="Original Source Image" hspace="20"/>
+<img align="center" src="./Images/flower_lotus.2170.jpg" alt="Original Source Image" title="Original Source Image" hspace="20"/>
 </p>
 
 
