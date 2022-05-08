@@ -80,4 +80,38 @@ Below is a simplified Software Architecture diagramming how the application beha
 <img align="center" src="./Images/Stegosaurus_Software_Architecture.png" alt="Stegosaurus Software Architecture Diagram" title="Architecuture Diagram" hspace="20"/>
 </p>
 
-## Running the Application
+### API Documentation
+
+Encoding: Hiding a message inside an Image
+POST /encoder
+	file (formData)
+	message (formData)
+
+  ```
+  <form action = "http://localhost:5000/encoder" method = "POST"
+   enctype = "multipart/form-data">
+   <input type = "file" name = "file" /><br><br>
+   <label for = "message">Message:</label><br>
+   <input type = "text" id = "message" name = "message"/><br><br>
+   <input type = "submit" value="Encode Image"/>
+   </form>
+  ```
+
+Decoding: Revealing a message inside an Image
+
+POST /decoder
+  file (formData)
+
+  ```
+  <form action = "http://localhost:5000/decoder" method = "POST"
+     enctype = "multipart/form-data">
+     <input type = "file" name = "file" /><br><br>
+     <input type = "submit" value="Decode Image"/>
+  </form>
+  ```
+
+Downloading: Retrieving Files from Server
+
+GET /download/<file_name>
+
+### Running the Application
