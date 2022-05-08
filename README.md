@@ -72,6 +72,7 @@ Steganography is generally very hard to detect, especially if the person is not 
 ## The Application
 Stegosaurus can be used either as a local console application, or as a Web App.
 - The Web App is implemented using the Flask Framework
+  - Aside from the Stegosaurus Specific Content on each page, all HTML styling is based on W3Schools' ![Interior Design Template](https://www.w3schools.com/w3css/tryw3css_templates_interior_design.htm)
 - The local console application is a simple Python script
 
 Below is a simplified Software Architecture diagramming how the application behaves. Depending on whether a client is accessing the application over a local console or via a web browser, some features act differently, or are skipped entirely.
