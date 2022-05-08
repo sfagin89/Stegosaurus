@@ -4,7 +4,7 @@ Steganography Application for Encoding/Decoding Hidden Data in Images
 ## What is Steganography?
 Steganography is the act of hiding something (like a secret message) inside of another thing that is itself not hidden. This practice dates back to Ancient Greece, possibly earlier. And since then it has been used in various forms. In modern times, computers have made Steganography relatively easy and accessible to the average user.
 
-## How Might Simple Digital Steganography Work?
+## How Does Simple Digital Steganography Work?
 
 Pixels in an image are made up of 3 values, (red, green, blue), that range from 0 to 255. The difference between, say, 233 and 234 is barely noticeable, especially to the human eye. As an example, the image on the right has had the RGB values of each of its pixels subtracted by 1. How different do they look?
 
@@ -68,5 +68,14 @@ In this case, decoding the message is as simple as looking at the least signific
 
 ## Benefit of Using Web-Based Steganography Tools
 Steganography is generally very hard to detect, especially if the person is not aware Steganography has been used, as an image hiding a message effectively looks the same as the original image, with no visible loss in the picture quality. Often, the simplest way Steganography is detected is by the existence of a Steganography tool on the system. Using a Web-Based tool eliminates this risk, assuming the tool isn't bookmarked on your web browser, further reducing the likelihood of a hidden message being detected and decoded.
+
+## The Application
+Stegosaurus can be used either as a local console application, or as a Web App.
+- The Web App is implemented using the Flask Framework
+- The local console application is a simple Python script
+
+Below is a simplified Software Architecture diagramming how the application behaves. Depending on whether a client is accessing the application over a local console or via a web browser, some features act differently, or are skipped entirely.
+<img align="center" src="./Images/Stegosaurus_Software_Architecture.png" alt="Original 6x6 Pix Image" title="Original" hspace="20"/>
+
 
 ## Running the Application
