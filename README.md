@@ -15,7 +15,7 @@ Pixels in an image are made up of 3 values, (red, green, blue), that range from 
 
 Now imagine trying to see the difference when these 36 pixels are within an image containing over 65,000 pixels and zoomed out by 3200%
 <p align="center">
-<img align="center" src="./Images/flower_lotus.2170.jpg" alt="Original Source Image" title="Original Source Image" hspace="20"/>
+<img align="center" src="./Images/flower_lotus.jpg" alt="Original Source Image" title="Original Source Image" hspace="20"/>
 </p>
 
 This barely noticeable shift in pixel values can be used to represent the 1s and 0s of a secret message encoded in ASCII binary without showing the actual 1s and 0s.
@@ -75,6 +75,7 @@ Stegosaurus can be used either as a local console application, or as a Web App.
 - The local console application is a simple Python script
 
 Below is a simplified Software Architecture diagramming how the application behaves. Depending on whether a client is accessing the application over a local console or via a web browser, some features act differently, or are skipped entirely.
+
 <img align="center" src="./Images/Stegosaurus_Software_Architecture.png" alt="Stegosaurus Software Architecture Diagram" title="Architecuture Diagram" hspace="20"/>
 
 
