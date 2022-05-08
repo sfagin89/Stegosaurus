@@ -117,9 +117,9 @@ Below is a simplified Software Architecture diagramming how the application beha
 ### Running the Application
 *Important: This app has only been tested with Python3, it may not work with Python2*
 
-#### Currently Supported Image File Types:
-**JPG/JPEG**: File must end in *.jpeg* extension
-**PNG**
+##### Currently Supported Image File Types:
+  **JPG/JPEG**: File must end in *.jpeg* extension
+  **PNG**
 
 #### Desktop Client
 To run Stegosaurus locally on your desktop as a Console Application, do the following:
