@@ -82,12 +82,12 @@ Below is a simplified Software Architecture diagramming how the application beha
 
 ### API Documentation
 
-Encoding: Hiding a message inside an Image
-POST /encoder
-	file (formData)
-	message (formData)
+#### Encoding: Hiding a message inside an Image
+**POST** /encoder
+	*file (formData)*
+	*message (formData)*
 
-  ```
+  ```html
   <form action = "http://localhost:5000/encoder" method = "POST"
    enctype = "multipart/form-data">
    <input type = "file" name = "file" /><br><br>
@@ -97,12 +97,12 @@ POST /encoder
    </form>
   ```
 
-Decoding: Revealing a message inside an Image
+#### Decoding: Revealing a message inside an Image
 
-POST /decoder
-  file (formData)
+**POST** /decoder
+  *file (formData)*
 
-  ```
+  ```html
   <form action = "http://localhost:5000/decoder" method = "POST"
      enctype = "multipart/form-data">
      <input type = "file" name = "file" /><br><br>
@@ -110,8 +110,8 @@ POST /decoder
   </form>
   ```
 
-Downloading: Retrieving Files from Server
+#### Downloading: Retrieving Files from Server
 
-GET /download/<file_name>
+**GET** /download/<file_name>
 
 ### Running the Application
