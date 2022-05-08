@@ -75,7 +75,7 @@ Stegosaurus can be used either as a local console application, or as a Web App.
 - The local console application is a simple Python script
 
 Below is a simplified Software Architecture diagramming how the application behaves. Depending on whether a client is accessing the application over a local console or via a web browser, some features act differently, or are skipped entirely.
-<img align="center" src="./Images/Stegosaurus_Software_Architecture.png" alt="Original 6x6 Pix Image" title="Original" hspace="20"/>
+<img align="center" src="./Images/Stegosaurus_Software_Architecture.png" alt="Stegosaurus Software Architecture Diagram" title="Architecuture Diagram" hspace="20"/>
 
 
 ## Running the Application
