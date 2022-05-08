@@ -115,3 +115,47 @@ Below is a simplified Software Architecture diagramming how the application beha
 **GET** /download/<file_name>
 
 ### Running the Application
+*Important: This app has only been tested with Python3, it may not work with Python2*
+
+#### Currently Supported Image File Types:
+**JPG/JPEG**: File must end in *.jpeg* extension
+**PNG**
+
+#### Desktop Client
+To run Stegosaurus locally on your desktop as a Console Application, do the following:
+
+1. Clone the github repo to a local directory
+2. Place the image you want to use for the application in the Images directory
+3. From a console/terminal window, navigate to that directory
+4. Run the application
+  ```
+  python stegosaurus.py
+  ```
+5. To hide a message in an image, select 1 for Encode. To reveal a hidden message, select 2 for Decode.
+  * If you chose Encode, you will be prompted for the image file name and the message to hide in it.
+    * The encoded file will be output to the local directory using the original filename with 'encoded_' as a prefix
+  * If you chose Decode, you will be prompted for the image file name to reveal the message from.
+    * The hidden message will be output to the console window.
+
+#### Web Client
+To run Stegosaurus as a Web App, and then access it via a Browser, do the following:
+
+1. Clone the github repo to the webserver
+2. From a local console on the server, navigate to that directory
+3. Run the web application
+  ```
+  python app.py
+  ```
+4. From a browser, navigate to the home page
+5. To hide a message in an image, select Encode from the Sidebar. To reveal a hidden message, select Decode from the Sidebar
+
+  For Encoding
+  1. Click on **Choose File** to select and upload an image to hide a message within
+  2. Enter the message to hide in the text box, then click **Encode Image**
+  3. You will be redirected to a page where you can now download your encoded image by clicking on the **Download Encoded File** Link.
+
+  For Decoding
+  1. Click on **Choose File** to select and upload an image to reveal a hidden message from, then click **Decode Image**
+  2. You will be redirected to a page where your hidden message has been revealed.
+
+6. To close the application, from the server console simply enter **Ctrl+c**
