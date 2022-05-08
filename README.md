@@ -158,4 +158,4 @@ To run Stegosaurus as a Web App, and then access it via a Browser, do the follow
   1. Click on **Choose File** to select and upload an image to reveal a hidden message from, then click **Decode Image**
   2. You will be redirected to a page where your hidden message has been revealed.
 
-6. To close the application, from the server console simply enter **Ctrl+c**
+To close the application, from the server console simply enter **Ctrl+c**
