@@ -16,10 +16,8 @@ def encode_file():
 def encoder_file():
     if request.method == 'POST':
         f = request.files['file']
-        msg = request.form['message']
         f.save(secure_filename(f.filename))
-        stegosaurus.encode(f.filename, msg)
-        #stegosaurus.encode(f.filename, "test")
+        stegosaurus.encode(f.filename, "test")
         #return 'Message Hidden Successfully. File ready for download.'
         return redirect(url_for('upload_form', file_name="encoded_"+f.filename))
 
@@ -33,22 +31,6 @@ def download_file(file_name):
     #path = "flower_lotus.2170.jpg"
     path=file_name
     return send_file(path, as_attachment=True)
-
-@app.route('/decode')
-def decode_file():
-    return render_template('decode.html')
-
-@app.route('/decoder', methods = ['GET', 'POST'])
-def decoder_file():
-    if request.method == 'POST':
-        f = request.files['file']
-        f.save(secure_filename(f.filename))
-        dec_msg = stegosaurus.decode(f.filename)
-        print(dec_msg)
-        #stegosaurus.encode(f.filename, "test")
-        #return 'Message Hidden Successfully. File ready for download.'
-        #return redirect(url_for('decoded', dec_msg=dec_msg))
-        return render_template('decoded_message.html', dec_msg=dec_msg)
 
 if __name__=='__main__':
     app.run()

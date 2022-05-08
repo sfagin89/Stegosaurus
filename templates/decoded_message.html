@@ -47,32 +47,29 @@ body {font-size:16px;}
          <h2 class="w3-xxxlarge w3-text-red"><b>Hide Your Message!</b></h2>
          <hr style="width:50px;border:5px solid red" class="w3-round">
        </div>
+			 <h2>Message Revealed!</h2>
 
-      <form action = "http://localhost:5000/encoder" method = "POST"
-         enctype = "multipart/form-data">
-         <input type = "file" name = "file" /><br>
-         <label for = "message">Message:</label><br>
-         <input type = "text" id = "message" name = "message"/><br>
-         <input type = "submit" value="Encode Image"/>
-      </form>
+<p>
+	{{dec_msg}}
+</p>
 
-      <!-- W3.CSS Container -->
-      <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
-        <p class="w3-right">Visit our <a href="https://github.com/sfagin89/Stegosaurus" title="W3.CSS" target="_blank" class="w3-hover-opacity">GitHub</a><br>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p>
-      </div>
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+	<p class="w3-right">Visit our <a href="https://github.com/sfagin89/Stegosaurus" title="W3.CSS" target="_blank" class="w3-hover-opacity">GitHub</a><br>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p>
+</div>
 
-      <script>
-      // Script to open and close sidebar
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-      }
+<script>
+// Script to open and close sidebar
+function w3_open() {
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("myOverlay").style.display = "block";
+}
 
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-      }
+function w3_close() {
+	document.getElementById("mySidebar").style.display = "none";
+	document.getElementById("myOverlay").style.display = "none";
+}
 
-      </script>
-   </body>
+</script>
+</body>
 </html>

@@ -75,11 +75,11 @@ def encode(img, msg):
     img_new_name = "encoded_"+img
     img_new.save(img_new_name, str(img_new_name.split(".")[1].upper()))
 
-def decode(img):
+def decode():
     if debug:
         print("Decoding Data From Image")
 
-    #img = input("Enter image name (with extension): ")
+    img = input("Enter image name (with extension): ")
     image = Image.open(img, 'r')
 
     msg = ''
@@ -106,8 +106,7 @@ def main():
         msg = input("Enter data to be encoded: ")
         encode(img, msg)
     elif (a == 2):
-        img = input("Enter image name (with extension): ")
-        print("Decoded Message: " + decode(img))
+        print("Decoded Message: " + decode())
     else:
         raise Exception("Enter correct input")
 
