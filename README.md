@@ -4,22 +4,21 @@ Steganography Application for Encoding/Decoding Hidden Data in Images
 ## What is Steganography?
 Steganography is the act of hiding something (like a secret message) inside of another thing that is itself not hidden. This practice dates back to Ancient Greece, possibly earlier. And since then it has been used in various forms. In modern times, computers have made Steganography relatively easy and accessible to the average user.
 
-## How Does Digital Steganography Work?
+## How Might Simple Digital Steganography Work?
 
-Pixels in an image are made up of 3 values, (red, green, blue), that range from 0 to 255. The difference between, say, 233 and 234 is barely noticeable, especially to the human eye. As an example, The image on the right has had the RGB values of each of its pixels subtracted by 1. How different do they look?
+Pixels in an image are made up of 3 values, (red, green, blue), that range from 0 to 255. The difference between, say, 233 and 234 is barely noticeable, especially to the human eye. As an example, the image on the right has had the RGB values of each of its pixels subtracted by 1. How different do they look?
 
 <p align="center">
 <img align="center" src="./Images/ExampleRGBOriginal.png" alt="Original 6x6 Pix Image" title="Original" hspace="20"/>
 <img align="center" src="./Images/ExampleRGBShifted.png" alt="Shifted 6x6 Pix Image" title="Shifted" hspace="20"/>
 </p>
 
-Now imagine these 36 pixels within an image containing over 65,000 pixels and zoomed out by 3200%
+Now imagine trying to see the difference when these 36 pixels are within an image containing over 65,000 pixels and zoomed out by 3200%
 <p align="center">
 <img align="center" src="./Images/flower_lotus.2170.jpg" alt="Original Source Image" title="Original Source Image" hspace="20"/>
 </p>
 
-
-This can be used to represent the 1s and 0s of a secret message encoded in ASCII binary without showing the actual 1s and 0s.
+This barely noticeable shift in pixel values can be used to represent the 1s and 0s of a secret message encoded in ASCII binary without showing the actual 1s and 0s.
 
 Given a set of 3 pixels = (27, 64, 164), (248, 244, 194), (174, 246, 250)
 - The first 8 values will represent the 8 bits of a byte.
@@ -40,12 +39,12 @@ Given a set of 3 pixels = (27, 64, 164), (248, 244, 194), (174, 246, 250)
 Given a 6x6 Pixel Image
 - Original RGB Values
   ```
-  (239,210,215)(240,207,214)(242,204,219)|(244,206,221)(241,205,217)(231,195,207)
-  (237,201,213)(241,200,218)(243,198,219)|(240,195,216)(241,198,217)(239,196,215)
-  (240,204,216)(245,204,222)(243,198,219)|(235,190,211)(235,192,211)(248,205,224)
-  (237,194,214)(235,192,212)(242,194,218)|(248,200,224)(239,191,213)(241,193,215)
-  (239,196,216)(236,193,213)(237,189,213)|(250,202,226)(242,194,216)(237,189,211)
-  (242,194,218)(246,198,222)(245,196,218)|(238,189,211)(241,191,216)(246,196,221)
+  (239,210,215)(240,207,214)(242,204,219)(244,206,221)(241,205,217)(231,195,207)
+  (237,201,213)(241,200,218)(243,198,219)(240,195,216)(241,198,217)(239,196,215)
+  (240,204,216)(245,204,222)(243,198,219)(235,190,211)(235,192,211)(248,205,224)
+  (237,194,214)(235,192,212)(242,194,218)(248,200,224)(239,191,213)(241,193,215)
+  (239,196,216)(236,193,213)(237,189,213)(250,202,226)(242,194,216)(237,189,211)
+  (242,194,218)(246,198,222)(245,196,218)(238,189,211)(241,191,216)(246,196,221)
   ```
 For each bit, left to right starting with the leftmost 0 of 'H', the associated RGB value (Again moving left to rigth for each line) will either remain the same (If it's already the correct value), or subtracted by 1 to make it Even/Odd, to match with the bit value.
 - 'H' Starts with binary 0, so the first pixel value must be even.
@@ -57,12 +56,17 @@ For each bit, left to right starting with the leftmost 0 of 'H', the associated 
   - 218 isn't Odd, so 1 is subtracted to make it 217
 - RGB Values After Hiding 'Hello World' in the Image
 ```
-(238,209,214)(240,207,214)(242,204,218)|(244,205,221)(240,204,217)(230,195,206)
-(237,201,213)(241,200,218)(243,198,219)|(240,195,216)(241,198,217)(239,196,215)
-(240,204,216)(245,204,222)(243,198,219)|(235,190,211)(235,192,211)(248,205,224)
-(237,194,214)(235,192,212)(242,194,218)|(248,200,224)(239,191,213)(241,193,215)
-(239,196,216)(236,193,213)(237,189,213)|(250,202,226)(242,194,216)(237,189,211)
-(242,194,218)(246,198,222)(245,196,218)|(238,189,211)(241,191,216)(246,196,221)
+(238,209,214)(240,207,214)(242,204,218)(244,205,221)(240,204,217)(230,195,206)
+(237,201,213)(241,200,218)(243,198,219)(240,195,216)(241,198,217)(239,196,215)
+(240,204,216)(245,204,222)(243,198,219)(235,190,211)(235,192,211)(248,205,224)
+(237,194,214)(235,192,212)(242,194,218)(248,200,224)(239,191,213)(241,193,215)
+(239,196,216)(236,193,213)(237,189,213)(250,202,226)(242,194,216)(237,189,211)
+(242,194,218)(246,198,222)(245,196,218)(238,189,211)(241,191,216)(246,196,221)
 ```
+
+In this case, decoding the message is as simple as looking at the least significant bit of the values of each set of 3 pixels and converting the resulting binary to human readable ASCII
+
+## Benefit of Using Web-Based Steganography Tools
+Steganography is generally very hard to detect, especially if the person is not aware Steganography has been used, as an image hiding a message effectively looks the same as the original image, with no visible loss in the picture quality. Often, the simplest way Steganography is detected is by the existence of a Steganography tool on the system. Using a Web-Based tool eliminates this risk, assuming the tool isn't bookmarked on your web browser, further reducing the likelihood of a hidden message being detected and decoded.
 
 ## Running the Application
