@@ -1,5 +1,6 @@
-from flask import Flask, redirect, url_for, render_template, request, send_file
+from flask import Flask, redirect, url_for, render_template, request, send_file, send_from_directory
 from werkzeug.utils import secure_filename
+import os
 import stegosaurus
 app = Flask(__name__)
 
@@ -17,8 +18,9 @@ def encoder_file():
     if request.method == 'POST':
         f = request.files['file']
         msg = request.form['message']
-        f.save(secure_filename(f.filename))
-        stegosaurus.encode(f.filename, msg)
+        f.save(os.path.join("./uploaded_files/",secure_filename(f.filename)))
+        #f.save(secure_filename(f.filename))
+        stegosaurus.encode("./uploaded_files/"+f.filename, msg)
 
         #stegosaurus.encode(f.filename, "test")
         #return 'Message Hidden Successfully. File ready for download.'
@@ -35,7 +37,8 @@ def download_file(file_name):
     #path = "flower_lotus.2170.jpg"
     path=file_name
 
-    return send_file(path, as_attachment=True)
+    #return send_file(path, as_attachment=True)
+    return send_from_directory("./output_files/", path, as_attachment=True)
 
 @app.route('/decode')
 def decode_file():
@@ -45,8 +48,8 @@ def decode_file():
 def decoder_file():
     if request.method == 'POST':
         f = request.files['file']
-        f.save(secure_filename(f.filename))
-        dec_msg = stegosaurus.decode(f.filename)
+        f.save(os.path.join("./uploaded_files/",secure_filename(f.filename)))
+        dec_msg = stegosaurus.decode("./uploaded_files/"+f.filename)
         print(dec_msg)
 
         #stegosaurus.encode(f.filename, "test")
