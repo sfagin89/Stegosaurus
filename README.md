@@ -85,8 +85,8 @@ Below is a simplified Software Architecture diagramming how the application beha
 
 #### Encoding: Hiding a message inside an Image
 **POST** `/encoder`
-	*file (formData)*
-	*message (formData)*
+	* *file (formData)*
+	* *message (formData)*
 
   ```html
   <form action = "http://localhost:5000/encoder" method = "POST"
@@ -101,7 +101,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 #### Decoding: Revealing a message inside an Image
 
 **POST** `/decoder`
-  *file (formData)*
+  * *file (formData)*
 
   ```html
   <form action = "http://localhost:5000/decoder" method = "POST"
@@ -113,7 +113,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 
 #### Downloading: Retrieving Files from Server
 
-**GET** `/download/<file_name>``
+**GET** `/download/<file_name>`
 
 ### Running the Application
 *Important: This app has only been tested with Python3, it may not work with Python2*
