@@ -87,7 +87,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 
 **POST** `/encoder`
   * *file (formData)*
-	* *message (formData)*
+  * *message (formData)*
 
   ```html
   <form action = "http://localhost:5000/encoder" method = "POST"
