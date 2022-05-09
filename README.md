@@ -78,7 +78,7 @@ Stegosaurus can be used either as a local console application, or as a Web App.
 Below is a simplified Software Architecture diagramming how the application behaves. Depending on whether a client is accessing the application over a local console or via a web browser, some features act differently, or are skipped entirely.
 
 <p align="center">
-<img align="center" src="./Images/Stegosaurus_Software_Architecture.png" alt="Stegosaurus Software Architecture Diagram" title="Architecuture Diagram" hspace="20"/>
+<img align="center" src="./Images/Stegosaurus_Software_Architecture.png" alt="Stegosaurus Software Architecture Diagram" title="Architecture Diagram" hspace="20"/>
 </p>
 
 ### API Documentation
@@ -117,6 +117,8 @@ Below is a simplified Software Architecture diagramming how the application beha
 
 ### Running the Application
 *Important: This app has only been tested with Python3, it may not work with Python2*
+
+*Note: Because JPEG uses lossy compression algorithm, some data may be lost, which results in inconsistent encode output. Due to this, all input JPEG images will be output as PNG files, to preserve the fine adjustments implemented in the encoding process*
 
 ##### Currently Supported Image File Types:
   * **JPG/JPEG**: File must end in *.jpeg* extension

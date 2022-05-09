@@ -58,8 +58,8 @@ def encode_enc(img_new, msg_ascii):
             x += 1
 
 def encode(img, msg):
-#    if debug:
-#        print("Encoding Data Into Image")
+    if debug:
+        print("Encoding Data Into Image")
 
     #img = input("Enter image name (with extension): ")
     image = Image.open(img, 'r')
@@ -72,7 +72,8 @@ def encode(img, msg):
     encode_enc(img_new, msg)
 
     #img_new_name = input("Enter the name of the new image (with extension): ")
-    img_new_name = "encoded_"+img
+    #img_new_name = "encoded_"+img
+    img_new_name = "encoded_out.png"
     img_new.save(img_new_name, str(img_new_name.split(".")[1].upper()))
 
 def decode(img):
