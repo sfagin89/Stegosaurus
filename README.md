@@ -86,7 +86,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 #### Encoding: Hiding a message inside an Image
 
 **POST** `/encoder`
-	* *file (formData)*
+  * *file (formData)*
 	* *message (formData)*
 
   ```html
