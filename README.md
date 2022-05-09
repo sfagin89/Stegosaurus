@@ -81,6 +81,14 @@ Below is a simplified Software Architecture diagramming how the application beha
 <img align="center" src="./Images/Stegosaurus_Software_Architecture.png" alt="Stegosaurus Software Architecture Diagram" title="Architecture Diagram" hspace="20"/>
 </p>
 
+<p align="center">
+<img align="center" src="./Images/WebAppHomePage.png" alt="Application Web Application Home Page" title="Application Web Application Home Page" hspace="20"/>
+</p>
+
+<p align="center">
+<img align="center" src="./Images/DesktopClientTerminalWindow.png" alt="Desktop Client Terminal Window" title="Desktop Client Terminal Window" hspace="20"/>
+</p>
+
 ### API Documentation
 
 #### Encoding: Hiding a message inside an Image
