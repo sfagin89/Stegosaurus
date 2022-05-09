@@ -1,3 +1,21 @@
+# stegosaurus.py
+# Author: Sara Fagin
+# Adapted from code at https://www.geeksforgeeks.org/image-based-steganography-using-python/
+#
+# Functionality:
+# Currently can be run directly from a console window, or from a flask app.
+# User selects either Encode or Decode
+#   If Encode, user is prompted to enter the filename and message to hide
+#       a new file is output, now containing the hidden message.
+#   If Decode, user is prompted to enter the filename
+#       the file is decoded and the hidden message printed to the console window
+#
+# Future Planned Functionality
+#   Allow for different kinds of Steganography Pattern
+#   For Web Service, remove uploaded and output files from server after files
+#       are downloaded or the message is displayed.
+#       *Not needed for dekstop client access
+
 from PIL import Image
 
 # Set Debug State

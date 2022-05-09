@@ -84,7 +84,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 ### API Documentation
 
 #### Encoding: Hiding a message inside an Image
-**POST** /encoder
+**POST** `/encoder`
 	*file (formData)*
 	*message (formData)*
 
@@ -100,7 +100,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 
 #### Decoding: Revealing a message inside an Image
 
-**POST** /decoder
+**POST** `/decoder`
   *file (formData)*
 
   ```html
@@ -113,7 +113,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 
 #### Downloading: Retrieving Files from Server
 
-**GET** /download/<file_name>
+**GET** `/download/<file_name>``
 
 ### Running the Application
 *Important: This app has only been tested with Python3, it may not work with Python2*
@@ -128,15 +128,15 @@ Below is a simplified Software Architecture diagramming how the application beha
 To run Stegosaurus locally on your desktop as a Console Application, do the following:
 
 1. Clone the github repo to a local directory
-2. Place the image you want to use for the application in the Images directory
-3. From a console/terminal window, navigate to that directory
+2. Place the image you want to use for the application in the *Stegosaurus/Images* directory
+3. From a console/terminal window, navigate to the main *Stegosaurus* directory
 4. Run the application
   ```
   python stegosaurus.py
   ```
 5. To hide a message in an image, select 1 for Encode. To reveal a hidden message, select 2 for Decode.
   * If you chose Encode, you will be prompted for the image file name and the message to hide in it.
-    * The encoded file will be output to the local directory using the original filename with 'encoded_' as a prefix
+    * The encoded file will be output to the *Stegosaurus/output_files/* directory as a file named *encoded_out.png*
   * If you chose Decode, you will be prompted for the image file name to reveal the message from.
     * The hidden message will be output to the console window.
 
