@@ -84,6 +84,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 ### API Documentation
 
 #### Encoding: Hiding a message inside an Image
+
 **POST** `/encoder`
 	* *file (formData)*
 	* *message (formData)*
