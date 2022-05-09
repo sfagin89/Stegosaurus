@@ -82,7 +82,7 @@ Below is a simplified Software Architecture diagramming how the application beha
 </p>
 
 <p align="center">
-<img align="center" src="./Images/WebAppHomePage.png" alt="Application Web Application Home Page" title="Application Web Application Home Page" hspace="20"/>
+<img align="center" src="./Images/WebAppHomePage.png" alt="Application Web Application Home Page" title="Application Web Application Home Page" hspace="20" width="612" height="377"/>
 </p>
 
 <p align="center">
